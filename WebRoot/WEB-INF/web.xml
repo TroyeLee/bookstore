@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>bookStores</display-name>
+  <servlet>
+    <description>JAX-RS Tools Generated - Do not modify</description>
+    <servlet-name>JAX-RS Servlet</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+
+    <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegidterServlet</servlet-name>
+
+
+    <servlet-class>servlet.RegidterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindpswServlet</servlet-name>
+
+    <servlet-class>servlet.FindpswServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>updateServlet</servlet-name>
+
+    <servlet-class>servlet.updateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookaddServlet</servlet-name>
+    <servlet-class>servlet.BookaddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddtoshopServlet</servlet-name>
+    <servlet-class>servlet.AddtoshopServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchbookServlet</servlet-name>
+    <servlet-class>servlet.SearchbookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BuyServlet</servlet-name>
+    <servlet-class>servlet.BuyServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>JAX-RS Servlet</servlet-name>
+    <url-pattern>/jaxrs/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegidterServlet</servlet-name>
+    <url-pattern>/RegidterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindpswServlet</servlet-name>
+    <url-pattern>/FindpswServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>updateServlet</servlet-name>
+    <url-pattern>/updateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookaddServlet</servlet-name>
+    <url-pattern>/BookaddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddtoshopServlet</servlet-name>
+    <url-pattern>/AddtoshopServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchbookServlet</servlet-name>
+    <url-pattern>/SearchbookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyServlet</servlet-name>
+    <url-pattern>/BuyServlet</url-pattern>
+  </servlet-mapping>
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>Filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <servlet-name>SearchbookServlet</servlet-name>
+        <servlet-name>BookaddServlet</servlet-name>
+        <servlet-name>FindpswServlet</servlet-name>
+        <servlet-name>AddtoshopServlet</servlet-name>
+        <servlet-name>updateServlet</servlet-name>
+        <servlet-name>RegidterServlet</servlet-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-name>JAX-RS Servlet</servlet-name>
+        <servlet-name>BuyServlet</servlet-name>
+    </filter-mapping>
+  
+</web-app>
